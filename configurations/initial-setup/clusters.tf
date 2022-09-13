@@ -7,8 +7,8 @@ data "confluent_environment" "workshop_env" {
 resource "confluent_kafka_cluster" "basic" {
   display_name = var.confluent_cloud_cluster_name
   availability = "SINGLE_ZONE"
-  cloud        = "AWS"
-  region       = "us-east-2"
+  cloud        = "AZURE"
+  region       = "swedencentral"
   basic {}
   environment {
     id = data.confluent_environment.workshop_env.id
